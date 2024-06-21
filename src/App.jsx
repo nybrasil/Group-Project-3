@@ -2,6 +2,7 @@ import Header from './components/Header';
 import TradingViewWidget from './components/TradingViewWidget';
 import CardPortfolio from './components/CardPortfolio';
 import CardContact from './components/CardContact';
+import Chatbot from './components/Chatbot';
 import Footer from './components/Footer';
 
 
@@ -13,6 +14,7 @@ function App() {
       <TradingViewWidget />
       <CardPortfolio />
       <CardContact />
+      <Chatbot />
       <Footer />
     </div>
   );
