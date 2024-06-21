@@ -1,7 +1,7 @@
 function Chatbot() {
     return (
       <>
-        <h1 className="reviews" id="reviews">What our Travelers are Saying</h1>
+        <h1 className="reviews" id="reviews">What our Investors are Saying</h1>
         <div className="outerdiv">
           <div className="innerdiv">
             {/* div1 */}
@@ -12,12 +12,12 @@ function Chatbot() {
                 </div>
                 <div className="detbox">
                   <p className="name2">Daniel Clifford</p>
-                  <p className="designation2">Trip to Spain</p>
+                  <p className="designation2">Bought Apple STock</p>
                 </div>
               </div>
               <div className="review2">
-                <h4>This website helped me properly prepare for my trip to Spain, was invaluable! </h4>
-                <p>“Best Travel Website out there!!”</p>
+                <h4>This website helped me properly prepare for the ideal time to sell my Apple shares, was invaluable! </h4>
+                <p>“Best Investment Website out there!!”</p>
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
             </div>
@@ -29,12 +29,12 @@ function Chatbot() {
                 </div>
                 <div className="detbox">
                   <p className="name">Jonathan Walters</p>
-                  <p className="designation">Trip to Africa</p>
+                  <p className="designation">Bought IBM Stock</p>
                 </div>
               </div>
               <div className="review">
-                <h4>A huge help in preparing for international travel!</h4>
-                <p>“Highly recommend this site for international travelers!!”</p>
+                <h4>A huge help in preparing my stock portfolio!</h4>
+                <p>“Highly recommend this site for personal investors!!”</p>
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
             </div>
@@ -46,12 +46,12 @@ function Chatbot() {
                 </div>
                 <div className="detbox">
                   <p className="name dark">Kira Whittle</p>
-                  <p className="designation dark">Trip to London</p>
+                  <p className="designation dark">Sold NIKE stock</p>
                 </div>
               </div>
               <div className="review dark">
-                <h4>Useful, practical information to help plan for any overseas traveling!</h4>
-                <p>“Great travel website!!"</p>
+                <h4>Useful, practical information to help plan for buying or selling your stocks!</h4>
+                <p>“Great stock website!!"</p>
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
             </div>
@@ -63,12 +63,12 @@ function Chatbot() {
                 </div>
                 <div className="detbox">
                   <p className="name dark">Jeanette Harmon</p>
-                  <p className="designation dark">Trip to Mexico</p>
+                  <p className="designation dark">Stock Analysis</p>
                 </div>
               </div>
               <div className="review dark">
-                <h4>Helped me lock in the best possible FX rate before my trip!</h4>
-                <p>“This website gave me the tools I needed to lock in the best FX rate possible!”</p>
+                <h4>Helped me lock in the best possible Apple stock rate before my trip!</h4>
+                <p>“This website gave me the tools I needed to lock in the best stock rate possible!”</p>
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
             </div>
@@ -81,11 +81,11 @@ function Chatbot() {
                 </div>
                 <div className="detbox">
                   <p className="name">Patrick Abrams</p>
-                  <p className="designation">Trip to Brazil</p>
+                  <p className="designation">Analyze Stocks</p>
                 </div>
               </div>
               <div className="review">
-                <h4>Easy to use website with a ton of useful travel information!</h4>
+                <h4>Easy to use website with a ton of useful stock information!</h4>
                 <p>“5 Stars!!”</p>
                 <p>⭐⭐⭐⭐⭐</p>
               </div>

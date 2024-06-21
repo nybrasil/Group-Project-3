@@ -285,13 +285,13 @@ color: black;
 
 /* Navigation ZURB */
 #logo {
-width: 350px;
+width: 250px;
 padding-bottom: 50px;
 }
 
 .subnav-hero-section {
 text-align: center;
-background: #101010;
+background: #232222;
 background-size: cover;
 position: relative;
 overflow: visible;
@@ -900,7 +900,7 @@ display: inline-block;
   }
 
   #logo {
-    width: 300px;
+    width: 250px;
     padding-bottom: 80px;
   }
   #aboutUs {
