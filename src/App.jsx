@@ -13,10 +13,10 @@ function App() {
     <div>
       <Header />
       <TradingViewWidget />
+      <Reviews />
       <CardPortfolio />
       <CardContact />
       <Chatbot />
-      <Reviews />
       <Footer />
     </div>
   );
