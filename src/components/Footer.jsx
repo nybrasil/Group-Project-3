@@ -1,12 +1,23 @@
-// Here we are importing a CSS file as a dependency
-import '../styles/Footer.css';
+import React from 'react';
+import { MDBFooter } from 'mdb-react-ui-kit';
 
-function Footer() {
+export default function SimpleFooter() {
   return (
-    <header className="footer">
-      <h1>Copyright 2024 Ross Tauchert </h1>
-    </header>
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-white' style={{ width: '100%' }}>
+      <div className='text-center p-4' style={{ backgroundColor: 'lightgray' }}>
+        <p>
+          <strong>Contact Us</strong>
+        </p>
+        <p>
+          <span>Email: </span>info@example.com
+        </p>
+        <p>
+          <span>Address: </span>New York, NY 10012, US
+        </p>
+        <p>
+          <span>Phone: </span>+ 01 234 567 88
+        </p>
+      </div>
+    </MDBFooter>
   );
 }
-
-export default Footer;
