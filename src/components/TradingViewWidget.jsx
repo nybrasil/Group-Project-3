@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import "../styles/TradingViewWidget.css";
 
 function CustomTradingViewWidget() {
   const container = useRef(null);
@@ -26,8 +27,11 @@ function CustomTradingViewWidget() {
   }, []);
 
   return (
+    <div>
+       <h1>Analyze Your Stock Portfolio</h1>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <div ref={container} style={{ width: '80vw', height: '80vh' }}></div>
+    </div>
     </div>
       );
 }
