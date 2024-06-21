@@ -2,6 +2,7 @@ import Header from './components/Header';
 import TradingViewWidget from './components/TradingViewWidget';
 import Chatbot from './components/Chatbot';
 import Reviews from './components/Reviews';
+import Stripe from './components/Stripe';
 import Footer from './components/Footer';
 
 
@@ -13,6 +14,7 @@ function App() {
       <TradingViewWidget />
       <Reviews />
       <Chatbot />
+      <Stripe />
       <Footer />
     </div>
   );
