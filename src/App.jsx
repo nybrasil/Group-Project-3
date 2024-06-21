@@ -1,6 +1,5 @@
-import Ticker from './components/Ticker';
 import Header from './components/Header';
-import CardAbout from './components/CardAbout';
+import TradingViewWidget from './components/TradingViewWidget';
 import CardPortfolio from './components/CardPortfolio';
 import CardContact from './components/CardContact';
 import Footer from './components/Footer';
@@ -11,8 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <Ticker /> */}
-      <CardAbout />
+      <TradingViewWidget />
       <CardPortfolio />
       <CardContact />
       <Footer />
