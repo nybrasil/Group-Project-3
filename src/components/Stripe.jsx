@@ -1,3 +1,4 @@
+import "../styles/Stripe.css";
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { loadStripe } from '@stripe/stripe-js';
@@ -64,13 +65,16 @@ const CheckoutForm = () => {
   };
 
   return (
+    <div id="stripe">
     <form onSubmit={handleSubmit}>
+        <h1 id="title">We Accept Donations! </h1>
       <PaymentElement />
-      <button type="submit" disabled={!stripe || !elements}>
+      <button id="button" type="submit" disabled={!stripe || !elements}>
         Pay
       </button>
       {errorMessage && <div>{errorMessage}</div>}
     </form>
+    </div>
   );
 };
 
