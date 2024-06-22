@@ -3,8 +3,8 @@ import { MDBFooter } from 'mdb-react-ui-kit';
 
 export default function SimpleFooter() {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-white' style={{ width: '100%' }}>
-      <div className='text-center p-4' style={{ backgroundColor: 'lightgray' }}>
+    <MDBFooter bgColor='dark' className='text-center text-lg-start text-white' style={{ width: '100%' }}>
+      <div className='text-center p-4' style={{ backgroundColor: 'black', color: 'white' }}>
         <p>
           <strong>Contact Us</strong>
         </p>
