@@ -1,0 +1,18 @@
+footer: {
+    backgroundColor: 'dark',
+    color: 'white',
+    textAlign: 'center',
+    paddingTop: '1rem',
+  },
+  container: {
+    padding: '1rem',
+  },
+  link: {
+    color: 'white',
+    textDecoration: 'none',
+  },
+  copywriteSection: {
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    textAlign: 'center',
+    padding: '0.75rem',
+  },

@@ -1,11 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// Use dotenv or similar to load environment variables if needed
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Default to 3000 if the PORT environment variable is not set
+const port = process.env.PORT || 3000;
+
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
-    open: true
-  }
-})
+    port: port,
+  },
+});
