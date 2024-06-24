@@ -6,7 +6,11 @@ function AboutUs() {
         // this <> acts as a parent div
         <>
         <Header />
-        <h1>This is about us</h1>
+        <h1>Ross Tauchert</h1>
+        <h1>Tania Bezerra</h1>
+        <h1>Chris Joo</h1>
+        <h1>Mark Comer</h1>
+        <h1 style={{ paddingBottom: "100px" }}>Tyler Zhao</h1>
         <Footer />
         </>
     );
