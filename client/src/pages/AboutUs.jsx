@@ -6,7 +6,7 @@ function AboutUs() {
         // this <> acts as a parent div
         <>
         <Header />
-        <h1>Ross Tauchert</h1>
+        <a href="https://www.linkedin.com/in/ross-tauchert-9489079/" target="_blank" rel="noopener noreferrer"><h1>Ross Tauchert</h1></a>
         <h1>Tania Bezerra</h1>
         <h1>Chris Joo</h1>
         <h1>Mark Comer</h1>

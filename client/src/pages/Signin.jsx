@@ -9,7 +9,7 @@ function Signin() {
     <>
       <Header />
       <div className="signin-background">
-        <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: "50vh", marginTop: "10px", display: "grid"}}>
+        <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: "50vh", marginTop: "10px", display: "grid", backgroundColor: "white"}}>
           <div className="card p-5 m-2" style={{ maxWidth: "400px", width: "100%", backgroundColor: "lightgray" }}>
             <div className="card-body">
               <h2 className="card-title text-center mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Login</h2>
