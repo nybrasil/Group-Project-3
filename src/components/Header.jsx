@@ -1,6 +1,8 @@
 // Here we are importing a CSS file as a dependency
 import "../styles/Header.css";
 import project2Logo from "../assets/stock.jpeg.webp";
+import { Link } from "react-router-dom";
+
 
 function Header() {
   return (
@@ -8,10 +10,9 @@ function Header() {
     <header className="subnav-hero-section">
     <img id="logo" src={ project2Logo }></img>
     <ul className="subnav-hero-subnav">
-      <li><a href="#stockrates" className="is-active">Stock Rates</a></li>
-      <li><a href="#chatBot">Stock Chatbot AI</a></li>
-      <li><a href="#aboutUs1">About Us</a></li>
-      <li><a href="#signin">Sign In</a></li>
+    <li><Link to="/landing">Home</Link></li>
+      <li><Link to="/aboutus">About Us</Link></li>
+      <li><Link to="/">SignIn</Link></li>
     </ul>
   </header>
   );
