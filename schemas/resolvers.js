@@ -11,7 +11,7 @@ const resolvers = {
     },
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
+    register: async (parent, args) => {
       const matchup = await Matchup.create(args);
       return matchup;
     },
