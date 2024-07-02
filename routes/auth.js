@@ -1,26 +1,34 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/user');
+const jwt = require('jsonwebtoken');
 
+const secret = 'mysecretsshhhhh';
+const expiration = '2h';
 
-router.post('/register', async (req, res) => {
-  const { username, email, password } = req.body;
+module.exports = {
+  authMiddleware: function ({ req }) {
+    // Allows token to be sent via req.body, req.query, or headers
+    let token = req.body.token || req.query.token || req.headers.authorization;
 
-  console.log('Received registration data:', req.body); 
+    // Separate "Bearer" from "<tokenvalue>"
+    if (req.headers.authorization) {
+      token = token.split(' ').pop().trim();
+    }
 
-  const newUser = new User({
-    username,
-    email,
-    password
-  });
+    if (!token) {
+      return req;
+    }
 
-  try {
-    await newUser.save();
-    res.status(201).send('User registered successfully');
-  } catch (err) {
-    console.error('Error during user registration:', err); 
-    res.status(400).send('Error during user registration: ' + err.message);
-  }
-});
+    try {
+      // Decode and attach user data to request object
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      req.user = data;
+    } catch {
+      console.log('Invalid token');
+    }
 
-module.exports = router;
+    return req;
+  },
+  signToken: function ({ username, email, _id }) {
+    const payload = { username, email, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
+};
