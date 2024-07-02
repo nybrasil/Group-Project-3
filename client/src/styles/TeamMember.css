@@ -1,0 +1,35 @@
+/* TeamMember.css */
+.team-member {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
