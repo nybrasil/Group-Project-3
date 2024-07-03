@@ -1,50 +1,52 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
 
 function Signin() {
-  const [loginData, setLoginData] = useState({ username: '', password: '' });
-  const [registerData, setRegisterData] = useState({ username: '', email: '', password: '' });
-  const navigate = useNavigate();
+  const [loginData, setLoginData] = useState({email: '', password: ''})
+  const [registerData, setRegisterData] = useState({ username: '', email: '', password:''})
+  const navigate = useNavigate()
+  const [signup, {signuperror, signupdata}] = useMutation(ADD_USER)
+  const [login, {loginerror, logindata}] = useMutation(LOGIN_USER)
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(loginData),
-    });
-
-    if (response.ok) {
-      navigate('/landing');
-    } else {
-      alert('Login failed');
+    try {
+      console.log(loginData);
+      const {data} = await login({
+        variables: {...loginData},
+      });
+      console.log(data);
+      Auth.login(data.login.token);
+      navigate("/aboutus");
+    } catch (error) {
+      console.log(loginerror);
     }
   };
+
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/auth/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(registerData),
-    });
-
-    if (response.ok) {
-      alert('Registration successful');
-    } else {
-      const errorMessage = await response.text();
-      alert(`Registration failed: ${errorMessage}`);
+    try {
+      const { data } = await signup({
+        variables: {...registerData},
+      });
+      console.log(data);
+      Auth.login(data.adduser.token);
+      navigate("/aboutus");
+    } catch (error) {
+      console.log(error);
     }
+
   };
 
   return (
@@ -63,11 +65,12 @@ function Signin() {
                     </div>
                     <input
                       className="form-control"
+                      name = "email"
                       type="text"
                       id="email-login"
                       placeholder="Email"
                       value={loginData.username}
-                      onChange={(e) => setLoginData({ ...loginData, username: e.target.value })}
+                      onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
                       required
                     />
                   </div>
@@ -79,6 +82,7 @@ function Signin() {
                     </div>
                     <input
                       className="form-control"
+                      name = "password"
                       type="password"
                       id="password-login"
                       placeholder="Password"
@@ -105,6 +109,7 @@ function Signin() {
                     </div>
                     <input
                       className="form-control"
+                      name="name"
                       type="text"
                       id="name-signup"
                       placeholder="Your Name"

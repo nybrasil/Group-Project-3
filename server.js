@@ -12,7 +12,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware,
+  context: ({ req }) => authMiddleware({ req }),
 });
 
 const startApolloServer = async () => {
@@ -21,14 +21,15 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
 
-  // GraphQL endpoint
+  // Apply Apollo middleware
   server.applyMiddleware({ app, path: '/graphql' });
 
+  // Serve static files from the React app in production
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, './client/dist')));
+    app.use(express.static(path.join(__dirname, 'client/build')));
 
     app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, './client/dist/index.html'));
+      res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     });
   }
 
