@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const User = require('../models/User'); // Correct the import path if necessary
+const User = require('../models/user'); // Correct the import path if necessary
 const { signToken } = require('../routes/auth');
 
 const resolvers = {
