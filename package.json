@@ -10,7 +10,7 @@
     "develop": "concurrently \"npm run watch\" \"cd client && npm run dev\"",
     "build": "cd client && npm run build",
     "install-all": "npm i && cd ./client && npm i",
-    "render-build": "npm install && npm run build"
+    "render-build": "npm run install-all && npm run build"
   },
   "author": "",
   "license": "ISC",
