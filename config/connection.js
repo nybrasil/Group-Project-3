@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost:27017/StockAPI';
+const mongoURI = 'mongodb+srv://rosstauchert:Xadrez1982!!@cluster0.x4cmtvh.mongodb.net/projectdb?retryWrites=true&w=majority';
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected...'))
