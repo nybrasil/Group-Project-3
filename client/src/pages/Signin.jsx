@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import '../styles/Signin.css'; // Corrected path to the CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useMutation } from '@apollo/client';
@@ -53,8 +54,8 @@ function Signin() {
     <>
       <Header />
       <div className="signin-background">
-        <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: "50vh", marginTop: "10px", display: "grid", backgroundColor: "white" }}>
-          <div className="card p-5 m-2" style={{ maxWidth: "400px", width: "100%", backgroundColor: "lightgray" }}>
+        <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: "50vh", marginTop: "20px", marginBottom: "20px", display: "grid", backgroundColor: "white" }}>
+          <div className="card p-5 m-2" style={{ width: "700px", backgroundColor: "lightgray",marginBotton: "20px" }}>
             <div className="card-body">
               <h2 className="card-title text-center mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Login</h2>
               <form className="login-form" onSubmit={handleLogin}>
@@ -69,6 +70,7 @@ function Signin() {
                       type="text"
                       id="email-login"
                       placeholder="Email"
+                      style={{ borderRadius: "4px" }}
                       value={loginData.username}
                       onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
                       required
@@ -86,6 +88,7 @@ function Signin() {
                       type="password"
                       id="password-login"
                       placeholder="Password"
+                      style={{ borderRadius: "4px" }}
                       value={loginData.password}
                       onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
                       required
@@ -98,7 +101,7 @@ function Signin() {
               </form>
             </div>
           </div>
-          <div className="card p-5 m-2" style={{ maxWidth: "400px", width: "100%", backgroundColor: "lightgray" }}>
+          <div className="card p-5 m-2" style={{ width: "700px", backgroundColor: "lightgray", marginTop: "20px"}}>
             <div className="card-body">
               <h2 className="card-title text-center mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Register Today!</h2>
               <form className="signup-form" onSubmit={handleRegister}>
@@ -113,6 +116,7 @@ function Signin() {
                       type="text"
                       id="name-signup"
                       placeholder="Your Name"
+                      style={{ borderRadius: "4px" }}
                       value={registerData.username}
                       onChange={(e) => setRegisterData({ ...registerData, username: e.target.value })}
                       required
@@ -129,6 +133,7 @@ function Signin() {
                       type="email"
                       id="email-signup"
                       placeholder="Email"
+                      style={{ borderRadius: "4px" }}
                       value={registerData.email}
                       onChange={(e) => setRegisterData({ ...registerData, email: e.target.value })}
                       required
@@ -145,6 +150,7 @@ function Signin() {
                       type="password"
                       id="password-signup"
                       placeholder="Password"
+                      style={{ borderRadius: "4px" }}
                       value={registerData.password}
                       onChange={(e) => setRegisterData({ ...registerData, password: e.target.value })}
                       required
